@@ -13,14 +13,6 @@ return new class extends Migration
     {
         Schema::create('cars', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('maker_id')->constrained();
-            $table->foreignId('model_id')->constrained();
-            $table->foreignId('car_type_id')->constrained();
-            $table->foreignId('fuel_type_id')->constrained();
-            $table->foreignId('city_id')->constrained();
-            $table->integer('year');
-            $table->decimal('price', 12, 2);
-            $table->text('description')->nullable();
             $table->timestamps();
         });
     }
